@@ -87,5 +87,6 @@ explorePossibleLevels chapterNumber initial = void do
               (joinWith " "
                         (A.fromFoldable (map (fromCharArray <<< map showCube <<< A.fromFoldable)
                                              potentialLevel.target)))
+        log $ showList2 potentialLevel.target
         log $ "Steps: " <> showList2 potentialLevel.moves
         log "---"
