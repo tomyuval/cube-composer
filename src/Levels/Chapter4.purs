@@ -42,42 +42,46 @@ chapter4 = {
 
     levels: fromArray [
         "4.1" :-> {
-            name: "Take sides!",
-            help: Just """This chapter introduces partitioning. The function `partitionContainsR` reorders the columns
-                          so that the columns which do not contain a red cube are grouped on the left, and the columns
-                          which do are gouped on the right.""",
-            difficulty: Easy,
-            initial: [[Cyan, Red], [Cyan, Cyan], [Red, Red], [Cyan, Cyan], [Cyan, Red]],
-            target: [[Cyan, Cyan], [Cyan, Cyan], [Cyan, Red], [Red, Red], [Cyan, Red]]
-        },
-        "4.2" :-> {
-            name: "Take sides – again!",
-            help: Just """Note that within each partition – the columns which don't satisfy the condition and the
-                          columns which do – the order remains the same as it was prior to partitioning.""",
-            difficulty: Medium,
-            initial: [[Cyan, Red], [Cyan, Cyan], [Red, Red], [Cyan, Cyan], [Cyan, Red]],
-            target: [[Cyan, Cyan], [Cyan, Cyan], [Red, Red], [Cyan, Red], [Cyan, Red]]
-        },
-        "4.3" :-> {
-            name: "Shift",
-            help: Just "Can you partition this?",
-            difficulty: Medium,
-            initial: [[Cyan, Red], [Red, Cyan], [Cyan, Red], [Red, Cyan], [Cyan, Red]],
-            target: [[Red, Cyan], [Cyan, Red], [Red, Cyan], [Cyan, Red], [Red, Cyan]]
-        },
-        "4.4" :-> {
-            name: "Robot eyes",
-            help: Nothing,
-            difficulty: Medium,
-            initial: [[Brown, Brown, Brown], [Brown, Yellow, Brown], [Brown, Brown, Brown], [Brown, Yellow, Brown], [Brown, Brown, Brown]],
-            target: [[Brown, Brown, Brown], [Brown, Brown, Brown], [Brown, Brown, Brown], [Brown, Yellow, Brown], [Brown, Yellow, Brown]]
-        },
-        "4.5" :-> {
-            name: "Mountains",
+            name: "X",
             help: Nothing,
             difficulty: Hard,
             initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
-            target: [[Brown, Cyan, Cyan, Cyan], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan], [Brown, Brown, Brown, Cyan], [Brown, Brown, Cyan, Cyan]]
+            target: [[Brown, Cyan, Cyan, Cyan], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Yellow], [Brown, Brown, Yellow, Yellow], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan]]
+        },
+        "4.2" :-> {
+            name: "X",
+            help: Nothing,
+            difficulty: Hard,
+            initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
+            target: [[Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan], [Brown, Red, Red, Red], [Brown, Brown, Red, Red], [Brown, Brown, Brown, Red], [Brown, Brown, Red, Red]]
+        },
+        "4.3" :-> {
+            name: "X",
+            help: Nothing,
+            difficulty: Hard,
+            initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
+            target: [[Brown, Brown, Brown, Yellow], [Brown, Brown, Yellow, Yellow], [Brown, Cyan, Cyan, Cyan], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan]]
+        },
+        "4.4" :-> {
+            name: "X",
+            help: Nothing,
+            difficulty: Hard,
+            initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
+            target: [[Brown, Red, Red, Red], [Brown, Brown, Red, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan], [Brown, Brown, Brown, Red], [Brown, Brown, Red, Red]]
+        },
+        "4.5" :-> {
+            name: "X",
+            help: Nothing,
+            difficulty: Hard,
+            initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
+            target: [[Brown, Red, Red, Red], [Brown, Brown, Red, Red], [Brown, Brown, Brown, Yellow], [Brown, Brown, Yellow, Yellow], [Brown, Brown, Red, Red], [Brown, Brown, Brown, Red]]
+        },
+        "4.6" :-> {
+            name: "X",
+            help: Nothing,
+            difficulty: Hard,
+            initial: [[Brown, Brown, Red, Red], [Brown, Brown, Brown, Cyan], [Brown, Yellow, Yellow, Yellow], [Brown, Brown, Brown, Red], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Yellow, Yellow]],
+            target: [[Brown, Yellow, Yellow, Yellow], [Brown, Brown, Yellow, Yellow], [Brown, Brown, Cyan, Cyan], [Brown, Brown, Brown, Cyan], [Brown, Brown, Brown, Yellow], [Brown, Brown, Yellow, Yellow]]
         }
     ]
 }
