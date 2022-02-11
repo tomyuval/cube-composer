@@ -3,7 +3,7 @@ module PotentialLevelExplorer (
     ) where
 
 import Prelude
-import Data.List (List(..), concatMap, filter, length, (:))
+import Data.List (List(..), concat, concatMap, filter, length, (:))
 import Data.Map (fromFoldableWith, toUnfoldable)
 import Data.StrMap as SM
 import Data.Tuple (Tuple(..))
@@ -31,13 +31,14 @@ allPartitions list@(x : xs) = { firsts: Nil, lasts: list } : do partition <- all
                                                                        lasts: partition.lasts }
 
 potentialLevels :: SM.StrMap TransformerRecord -> Wall -> List PotentialLevel
-potentialLevels transformers initial = -- { moves: ("abc" : "def" : Nil) : ("xyz" : Nil) : Nil, target: Nil } : Nil
-    transformers #
-    getTransformerInfos #
+potentialLevels transformers initial =
+    let ts = getTransformerInfos transformers in
+    ts #
     allOrderedSubsets #
     map (\infos -> Tuple (map (_.id) infos) (transformed (map (_.function) infos) initial)) #
     map (\(Tuple transformerIds final) -> Tuple final (transformerIds : Nil)) #
     fromFoldableWith (<>) #
     toUnfoldable #
     filter (\(Tuple _ moves) -> length moves == 1) #
+    filter (\(Tuple _ moves) -> length (concat moves) >= 4 * (length ts) `div` 5) #
     map (\(Tuple final moves) -> { moves: moves, target: final })
